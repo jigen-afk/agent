@@ -5,9 +5,10 @@
 </head>
 <body>
   <h2>n8n Demo</h2>
-  <textarea id="input" placeholder="输入内容..."></textarea>
+  <textarea id="input" placeholder="输入内容..." rows="5" cols="50"></textarea><br>
   <button onclick="send()">提交</button>
   <pre id="output"></pre>
+
 
   <script>
     async function send() {
