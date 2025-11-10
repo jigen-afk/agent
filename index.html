@@ -14,7 +14,7 @@
     async function send() {
       const text = document.getElementById("input").value;
       document.getElementById("output").innerText = "处理中...";
-      const res = await fetch("http://localhost:5678/webhook-test/demo", {
+      const res = await fetch("http://localhost:5678/webhook/demo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text })
