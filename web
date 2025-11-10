@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>n8n Demo</title>
 </head>
 <body>
-  <h2>n8n Demo</h2>
+  <h2>n8n Web Demo</h2>
   <textarea id="input" placeholder="输入内容..." rows="5" cols="50"></textarea><br>
   <button onclick="send()">提交</button>
   <pre id="output"></pre>
 
-
   <script>
     async function send() {
       const text = document.getElementById("input").value;
+      document.getElementById("output").innerText = "处理中...";
       const res = await fetch("http://localhost:5678/webhook-test/demo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
